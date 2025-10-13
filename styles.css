@@ -9,9 +9,18 @@ body {
   margin: 0; 
   height: 100vh; 
   width: 100vw;  
-    background-color: #ffa0c8;
+   background-color: #ffa0c8;
    overflow: hidden;
 }
+
+h1{
+    color: #4f2938;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 56px;
+}
+
 .card{
     width: 90%;
     max-width: 470px;
@@ -62,12 +71,12 @@ body {
     margin-top: 30px;
 }
 
-.weather h1{
+.weather h2{
     font-size: 80px;
     font-weight: 500;
 }
 
-.weather h2{
+.weather h3{
     font-size: 45px;
     font-weight: 400;
     margin-top: 20px;

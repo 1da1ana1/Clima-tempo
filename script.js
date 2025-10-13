@@ -2,7 +2,8 @@ const apiKey = "24c431b4fc5e0917a82307de7accaf7c";
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const searchInput = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
-const wheaterIcon = document.querySelector(".weather-icon")
+const wheaterIcon = document.querySelector(".weather-icon");
+var timeDisplay = document.getElementById("time");
 
 async function checkWeather(city) {
     const response = await fetch(apiURL + city + `&appid=${apiKey}`);
@@ -34,6 +35,32 @@ document.querySelector(".weather").style.display = "block";
 document.querySelector(".error").style.display = "none";
     }
     
+}
+
+function refreshTime() {
+  var dateString = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
+  var formattedString = dateString.replace(", ", " - ");
+  timeDisplay.innerHTML = `Horário de Brasília: ${formattedString}`;
+}
+
+refreshTime()
+
+setInterval(refreshTime, 1000);
+
+function background(){
+
+        if(hora >= 0 && hora < 12){
+            //dia
+            img.src = './images/day-background.png'
+        }else if (hora >= 12 && hora <= 18){
+            //tarde
+            img.src = './images/day-background.png'
+            fundo.style.backgroundColor='orange'
+            geral.style.backgroundColor ='orangered'
+        }else{
+            // noite 
+            img.src = './images/day-background.png'
+        }
 }
 
 searchBtn.addEventListener("click", ()=>{
