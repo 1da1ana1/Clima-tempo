@@ -31,38 +31,51 @@ async function checkWeather(city) {
             wheaterIcon.src = "images/mist.png"
         }
 
-document.querySelector(".weather").style.display = "block";
-document.querySelector(".error").style.display = "none";
+        document.querySelector(".weather").style.display = "block";
+        document.querySelector(".error").style.display = "none";
     }
     
-}
-
-function refreshTime() {
-  var dateString = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
-  var formattedString = dateString.replace(", ", " - ");
-  timeDisplay.innerHTML = `Horário de Brasília: ${formattedString}`;
-}
-
-refreshTime()
-
-setInterval(refreshTime, 1000);
-
-function background(){
-
-        if(hora >= 0 && hora < 12){
-            //dia
-            img.src = './images/day-background.png'
-        }else if (hora >= 12 && hora <= 18){
-            //tarde
-            img.src = './images/day-background.png'
-            fundo.style.backgroundColor='orange'
-            geral.style.backgroundColor ='orangered'
-        }else{
-            // noite 
-            img.src = './images/day-background.png'
-        }
 }
 
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchInput.value);
 })
+
+function refreshTime() {
+  var dateString = new Date().toLocaleString("en-US", {timeZone: "America/Sao_Paulo"});
+  var formattedString = dateString.replace(", ", " - ");
+  timeDisplay.innerHTML = `${formattedString}`;
+}
+
+refreshTime();
+setInterval(refreshTime, 1000);
+
+function background(){
+
+    var time = new Date().getHours();
+    var body = document.querySelector("body"); 
+     
+    if(time >= 0 && time < 10){
+        //manha
+        document.body.style.backgroundImage="url('./images/morning-background.jpg')";
+    }else if (time >= 11 && time <= 15){
+        //dia
+        document.body.style.backgroundImage="url('./images/day-background.png')";
+    }else if(time >= 16 && time <= 18){
+        //inicio da tarde 
+        document.body.style.backgroundImage="url('./images/noon-start-background.png')";
+    }else if(time >= 18 && time <= 19){
+        //tarde
+        document.body.style.backgroundImage="url('./images/noon-background.jpg')";
+    }else{
+        //noite
+        document.body.style.backgroundImage="url('./images/night-background.jpg')";
+    }
+
+    body.style.backgroundSize = "cover";
+    body.style.backgroundRepeat = "no-repeat";
+    body.style.backgroundPosition = "center";
+}
+
+
+background();

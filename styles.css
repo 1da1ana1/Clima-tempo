@@ -9,14 +9,12 @@ body {
   margin: 0; 
   height: 100vh; 
   width: 100vw;  
-   background-color: #ffa0c8;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 h1{
     color: #4f2938;
     text-align: center;
-    margin-top: 30px;
     text-decoration: none;
     font-size: 56px;
 }
