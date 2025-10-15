@@ -4,6 +4,7 @@ const searchInput = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const wheaterIcon = document.querySelector(".weather-icon");
 var timeDisplay = document.getElementById("time");
+var cardBackground = document.querySelector(".card")
 
 async function checkWeather(city) {
     const response = await fetch(apiURL + city + `&appid=${apiKey}`);
@@ -58,18 +59,23 @@ function background(){
     if(time >= 0 && time < 10){
         //manha
         document.body.style.backgroundImage="url('./images/morning-background.jpg')";
+        timeDisplay.style.color = "#64845aff";
+        cardBackground.style.backgroundColor = "#7ead71";
     }else if (time >= 11 && time <= 15){
         //dia
         document.body.style.backgroundImage="url('./images/day-background.png')";
+        timeDisplay.style.color = "#593985";
+        cardBackground.style.backgroundColor = "#593985";
     }else if(time >= 16 && time <= 18){
-        //inicio da tarde 
-        document.body.style.backgroundImage="url('./images/noon-start-background.png')";
-    }else if(time >= 18 && time <= 19){
         //tarde
         document.body.style.backgroundImage="url('./images/noon-background.jpg')";
+        timeDisplay.style.color = "#fff";
+        cardBackground.style.backgroundColor = "#51002a";
     }else{
         //noite
         document.body.style.backgroundImage="url('./images/night-background.jpg')";
+        timeDisplay.style.color = "#fff";
+        cardBackground.style.backgroundColor = "#433d7b";
     }
 
     body.style.backgroundSize = "cover";
@@ -77,5 +83,6 @@ function background(){
     body.style.backgroundPosition = "center";
 }
 
-
 background();
+
+
