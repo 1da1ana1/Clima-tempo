@@ -3,6 +3,14 @@
 Esta aplicação web exibe informações meteorológicas em tempo real de qualquer cidade do mundo, integrando a **API OpenWeatherMap**.  
 Desenvolvida em apenas dois dias, a aplicação utiliza **HTML5**, **CSS3** e **JavaScript (ES6+)**, com foco em interatividade, desempenho e uma interface clara e agradável.
 
+## Visualização Online
+
+Acesse o site online: [Link para o projeto](https://clima-tempo-blue.vercel.
+
+https://github.com/user-attachments/assets/7c77d257-eba5-4687-a13a-2a1b677dc70capp/)  
+
+![1760488598145](https://github.com/user-attachments/assets/298257fd-a9ee-481b-bb4f-6f43c2c95299)
+
 ## Funcionalidades
 
 - Busca de cidades e exibição do clima em tempo real  
@@ -19,7 +27,4 @@ Desenvolvida em apenas dois dias, a aplicação utiliza **HTML5**, **CSS3** e **
 - **Conceitos aplicados:** programação assíncrona, consumo de dados JSON, manipulação do DOM  
 - **Boas práticas:** design responsivo, UX/UI adaptativo, validação de entradas e tratamento de erros  
 
-## Visualização Online
 
-Acesse o site online: [Link para o projeto](https://clima-tempo-blue.vercel.app/)  
-![1760488598145](https://github.com/user-attachments/assets/298257fd-a9ee-481b-bb4f-6f43c2c95299)
