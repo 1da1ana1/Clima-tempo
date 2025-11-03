@@ -5,9 +5,9 @@ Desenvolvida em apenas dois dias, a aplicação utiliza **HTML5**, **CSS3** e **
 
 ## Visualização Online
 
-Acesse o site online: [Link para o projeto](https://clima-tempo-blue.vercel.
+Acesse o site online: [Link para o projeto](https://clima-tempo-blue.vercel.)
 
-https://github.com/user-attachments/assets/7c77d257-eba5-4687-a13a-2a1b677dc70capp/)  
+![Gravando2025-11-03164349-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/8c9edd80-b656-4b65-bd89-f0c5de9c2172)
 
 ![1760488598145](https://github.com/user-attachments/assets/298257fd-a9ee-481b-bb4f-6f43c2c95299)
 
